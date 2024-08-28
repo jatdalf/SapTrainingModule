@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-image: url(Assets/FondoOcasa.svg);
+  background-repeat: repeat;  
+  min-height: 50vw;  
 }
 
 .App-logo {

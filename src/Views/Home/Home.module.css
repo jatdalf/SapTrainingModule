@@ -1,0 +1,35 @@
+.Home {
+    text-align: center;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(0, 0, 0); 
+    background-image: url(../../Assets/FondoOcasa.svg);
+    background-repeat: repeat; 
+    background-size: 10vw; 
+    min-height: 100vw;          
+  }
+  
+  .HomeLogo {
+    height: 30vmin;
+    pointer-events: none;
+    margin-top: 20%;
+  }
+
+  .HomeLink {
+    color: #61dafb;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+  
+  }
+/* Responsive Screens */
+@media only screen and (max-width: 500px) {
+  .HomeLogo {
+    margin-top: 60%;
+  }
+}
