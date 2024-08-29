@@ -1,0 +1,20 @@
+.Fondo{
+    border-radius: 15px;
+    height: 80vw;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-image: url(../../Assets/FondoOcasa.svg);
+    background-repeat: repeat; 
+    background-size: 10vw; 
+    min-height: 100vw; 
+} 
+.TrxVolver{
+    padding-left: 85%;
+}
+/* Responsive Screens */
+@media only screen and (max-width: 500px) {
+    .TrxVolver{
+        padding-left: 80%;
+    }
+  }

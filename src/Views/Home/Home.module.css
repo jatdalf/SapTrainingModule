@@ -1,24 +1,48 @@
-.Home {
-    text-align: center;
+.Home {    
     background-color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;   
     font-size: calc(10px + 2vmin);
-    color: rgb(0, 0, 0); 
+    color: rgb(0, 0, 0);        
+    position: relative;      
+  }
+.HomeLogo{
+    max-height: 3vw;
+    position: absolute;
+    top: -50px;   /* Posiciónalo en la parte superior */
+    left: 40px;  /* Posiciónalo en la parte izquierda */
+    margin: 10px; /* Opcional: añade un margen para separarlo del borde */
+}
+
+.Fondo{
+    border-radius: 15px;
+    height: 80vw;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
     background-image: url(../../Assets/FondoOcasa.svg);
     background-repeat: repeat; 
     background-size: 10vw; 
-    min-height: 100vw;          
-  }
-  
-  .HomeLogo {
-    height: 30vmin;
-    pointer-events: none;
-    margin-top: 20%;
-  }
+    min-height: 100vw; 
+} 
+.Transacciones{
+    position: relative;
+    top: 15vw;
+    left: 10%;
+    font-size: 3vw;
+    padding: 20px 20px 20px 20px;
+    font-weight: 700;
+    color: rgb(29, 147, 147);
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 28px, rgba(0, 0, 0, 0.22) 10px 10px 10px;
+    transition: transform 0.5s ease; /* Añadir transición suave */
+}
+
+.Transacciones:hover {
+    transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
+    color: white;
+    background-color: rgb(29, 147, 147);
+}
 
   .HomeLink {
     color: #61dafb;
@@ -30,6 +54,10 @@
 /* Responsive Screens */
 @media only screen and (max-width: 500px) {
   .HomeLogo {
-    margin-top: 60%;
+    margin-top: 10%;
+    left: 2%;
   }
+  .Transacciones{    
+    padding: 10px 10px 10px 10px;    
+}
 }

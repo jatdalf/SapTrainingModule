@@ -1,0 +1,26 @@
+.volver{
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 28px, rgba(0, 0, 0, 0.22) 10px 10px 10px;
+    transition: transform 0.5s ease; /* Añadir transición suave */
+    font-weight: 700;
+    padding: 10px 20px 10px 20px;
+    font-weight: 700;
+    color: rgb(29, 147, 147);
+}
+.volver:hover{    
+        transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
+        color: white;
+        background-color: rgb(29, 147, 147);  
+}
+.arrow {
+    display: inline-block;
+    transform: rotate(180deg); /* Rotar la flecha 180 grados */
+    position: relative;
+    top: 2px; /* Mover la flecha 5px hacia abajo */
+}
+@media only screen and (max-width: 500px) {
+    .volver{
+        display: inline-block;
+    }
+  }
