@@ -54,11 +54,17 @@ const Transacciones =()=>{
               </li>
               
               <li className={styles.ladoDerecho}>
-                <fieldset>
+                <fieldset className={styles.trxFieldset}>
                   <legend>Detalle</legend>
                     <fieldset className={styles.detalleTrx}>
-                      
-                    </fieldset>
+                      <legend className={styles.trxTitle}>{TrxSeleccionada?.nombre || ''}</legend>
+                      <span className={styles.trxExplanation}>
+                        {TrxSeleccionada?.explicacion || ''}
+                      </span>
+                    </fieldset>                    
+                    <Link to={TrxSeleccionada?.nombre || ''}>
+                      <button className={styles.botonPaso}>Ejemplo de uso</button>
+                    </Link>
                 </fieldset>
               </li>
             </ul>
