@@ -9,9 +9,9 @@
     color: rgb(29, 147, 147);
 }
 .volver:hover{    
-        transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
-        color: white;
-        background-color: rgb(29, 147, 147);  
+    transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
+    color: white;
+    background-color: rgb(29, 147, 147);  
 }
 .arrow {
     display: inline-block;
