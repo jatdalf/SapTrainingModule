@@ -14,14 +14,19 @@ const Transacciones =()=>{
     const [transaction, settransaction] = useState<Transaction[]>([
         {
             id: '1',
-            nombre: 'me51n',
-            uso: 'generación de solped',
-            explicacion: 'Transaccion utilizada en el proceso de generación de solicitudes para ordenes de compra, debe tener en cuenta que tiene que tener autorizado el GCp correspondiente (Grupo de compra)'
+            nombre: 'lt12',
+            uso: 'confirmacion de OT',
+            explicacion: 'Transaccion utilizada para la confirmacion de las Ordenes de Trabajo (OT)'
         },{
-            id: '2',
-            nombre: 'migo',
-            uso: 'Contabilizar documentos MIGO',
-            explicacion: 'Transaccion utilizada para confirmar el arribo de un producto solicitado en una orden de compra, o para confirmar la realizacion de un servicio o trabajo solicitado en una orden de compra'
+          id: '2',
+          nombre: 'me51n',
+          uso: 'generación de solped',
+          explicacion: 'Transaccion utilizada en el proceso de generación de solicitudes para ordenes de compra, debe tener en cuenta que tiene que tener autorizado el GCp correspondiente (Grupo de compra)'
+        },{
+          id: '3',
+          nombre: 'migo',
+          uso: 'Contabilizar documentos MIGO',
+          explicacion: 'Transaccion utilizada para confirmar el arribo de un producto solicitado en una orden de compra, o para confirmar la realizacion de un servicio o trabajo solicitado en una orden de compra'
         }
     ]);   
 
