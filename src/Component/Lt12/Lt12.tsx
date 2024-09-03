@@ -6,18 +6,19 @@ import React, { useState } from 'react';
 const Lt12 = ()=>{
     interface TrxLt12 {
         id: number;
+        imagen: string;
         explicacion: string;
       }
     
       const [trxLt12] = useState<TrxLt12[]>([
-        { id: 1, explicacion: 'El primer campo a completar es el "Número de OT" donde ingresamos el numero de Orden de trabajo a confirmar' },
-        { id: 2, explicacion: 'En segundo lugar ingresamos el "Número de almacén" correspondiente a la Orden de trabajo que vamos a confirmar\nLuego presionamos &#10094;ENTER&#10095;' },
-        { id: 3, explicacion: '3' },
-        { id: 4, explicacion: '4' },
-        { id: 5, explicacion: '5' },
-        { id: 6, explicacion: '6' },
-        { id: 7, explicacion: '7' },
-        { id: 8, explicacion: '8' }
+        { id: 1, imagen:'../../Assets/Lt12-01.png', explicacion: 'El primer campo a completar es el "Número de OT" donde ingresamos el numero de Orden de trabajo a confirmar' },
+        { id: 2, imagen:'../../Assets/Lt12-01.png',explicacion: 'En segundo lugar ingresamos el "Número de almacén" correspondiente a la Orden de trabajo que vamos a confirmar\nLuego presionamos &#10094;ENTER&#10095;' },
+        { id: 3, imagen:'../../Assets/Lt12-01.png',explicacion: '3' },
+        { id: 4, imagen:'../../Assets/Lt12-01.png',explicacion: '4' },
+        { id: 5, imagen:'../../Assets/Lt12-01.png',explicacion: '5' },
+        { id: 6, imagen:'../../Assets/Lt12-01.png',explicacion: '6' },
+        { id: 7, imagen:'../../Assets/Lt12-01.png',explicacion: '7' },
+        { id: 8, imagen:'../../Assets/Lt12-01.png',explicacion: '8' }
       ]);
     
       const [currentStep, setCurrentStep] = useState<number>(1);
