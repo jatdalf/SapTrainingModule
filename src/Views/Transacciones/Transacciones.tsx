@@ -19,11 +19,16 @@ const Transacciones =()=>{
             explicacion: 'Transaccion utilizada para la confirmacion de las Ordenes de Trabajo (OT)'
         },{
           id: '2',
+          nombre: 'yupdcontimas',
+          uso: 'modificacion de datos web a nivel contingentacion',
+          explicacion: 'Transaccion utilizada para modificar los totales que se encuentran registrados en la tabla de contingentacion, y son visualizados por via web asociados por programas'
+        },{
+          id: '3',
           nombre: 'me51n',
           uso: 'generación de solped',
           explicacion: 'Transaccion utilizada en el proceso de generación de solicitudes para ordenes de compra, debe tener en cuenta que tiene que tener autorizado el GCp correspondiente (Grupo de compra)'
         },{
-          id: '3',
+          id: '4',
           nombre: 'migo',
           uso: 'Contabilizar documentos MIGO',
           explicacion: 'Transaccion utilizada para confirmar el arribo de un producto solicitado en una orden de compra, o para confirmar la realizacion de un servicio o trabajo solicitado en una orden de compra'
