@@ -142,6 +142,9 @@
 
 /* Responsive Screens */
 @media only screen and (max-width: 500px) {
+    .Fondo{
+        height: 140vw;
+    }
     .TrxVolver{
         padding-left: 80%;
     }

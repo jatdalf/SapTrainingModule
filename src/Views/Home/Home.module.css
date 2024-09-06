@@ -15,14 +15,13 @@
 
 .Fondo{
     border-radius: 15px;
-    height: 80vw;
+    height: 70vw;
     width: 90%;
     margin-top: 5%;
     margin-left: 5%;
     background-image: url(../../Assets/FondoOcasa.svg);
     background-repeat: repeat; 
-    background-size: 10vw; 
-    min-height: 100vw; 
+    background-size: 10vw;     
 } 
 .Transacciones{
     position: relative;
@@ -58,6 +57,12 @@
     left: 2%;
   }
   .Transacciones{    
-    padding: 10px 10px 10px 10px;    
+    padding: 10px 10px 10px 10px;   
+    height: 15vw; 
+    width: 40vw;
+    font-size: 5vw;
 }
+  .Fondo{
+    height: 140vw;
+  }
 }
