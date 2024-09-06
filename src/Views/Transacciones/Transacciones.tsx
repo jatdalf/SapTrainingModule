@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Volver from '../../Component/Volver/Volver';
 import React, { useState } from 'react';
 
-const Transacciones =()=>{
+const Transacciones = () => {
     // Define una interfaz para los objetos de Transactions
     interface Transaction {
         id: string;
@@ -11,23 +11,27 @@ const Transacciones =()=>{
         uso: string;
         explicacion: string;       
     }
-    const [transaction, settransaction] = useState<Transaction[]>([
+
+    const [transaction, setTransaction] = useState<Transaction[]>([
         {
             id: '1',
             nombre: 'lt12',
             uso: 'confirmacion de OT',
             explicacion: 'Transaccion utilizada para la confirmacion de las Ordenes de Trabajo (OT)'
-        },{
+        },
+        {
           id: '2',
           nombre: 'yupdcontimas',
           uso: 'modificacion de datos web a nivel contingentacion',
           explicacion: 'Transaccion utilizada para modificar los totales que se encuentran registrados en la tabla de contingentacion, y son visualizados por via web asociados por programas'
-        },{
+        },
+        {
           id: '3',
           nombre: 'me51n',
           uso: 'generación de solped',
           explicacion: 'Transaccion utilizada en el proceso de generación de solicitudes para ordenes de compra, debe tener en cuenta que tiene que tener autorizado el GCp correspondiente (Grupo de compra)'
-        },{
+        },
+        {
           id: '4',
           nombre: 'migo',
           uso: 'Contabilizar documentos MIGO',
@@ -36,28 +40,53 @@ const Transacciones =()=>{
     ]);   
 
     const [TrxSeleccionada, setTrxSeleccionada] = useState<Transaction | null>(null);
+    const [searchTerm, setSearchTerm] = useState<string>(''); // Estado para el valor del input de búsqueda
 
     const handleClickTrx = (trx: Transaction) => {
         setTrxSeleccionada(trx);
-      };
+    };
 
-    return(
+    // Función para manejar el input de búsqueda y actualizar el estado
+    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(event.target.value.toLowerCase()); // Convertir el término de búsqueda a minúsculas
+    };
+
+    // Filtrar las transacciones según el término de búsqueda
+    const filteredTransactions = transaction.filter(t =>
+        t.nombre.toLowerCase().includes(searchTerm) // Filtrar las transacciones que coincidan con el término de búsqueda
+    );
+
+    return (
         <div>            
           <div className={styles.Fondo}>
-            <div className={styles.TrxVolver}>
-              <Volver />
+            <div className={styles.headercontainer}>
+              <div className={styles.Buscador}>
+                <span>Buscar Transaccion:</span>
+                <input 
+                  type="text" 
+                  id="buscador" 
+                  placeholder="ingrese la transaccion" 
+                  maxLength={20}
+                  value={searchTerm}
+                  onChange={handleSearch} // Manejar el cambio en el input de búsqueda
+                />
+              </div>
+              <div className={styles.TrxVolver}>
+                <Volver />
+              </div>
             </div>
+
             <ul className={styles.contenedorTrx}>
               <li className={styles.ladoIzquierdo}>
                 <fieldset className={styles.trxFieldset}>
                   <legend>Transacciones SAP</legend>
                   <fieldset className={styles.listadoTrx}>
                     <ol id="listado" className={styles.listado}>
-                        {transaction.map((t)=>(
-                                    <li key={t.id} onClick={() => handleClickTrx(t)}>
-                                        {t.nombre}
-                                    </li>                            
-                                ))}
+                        {filteredTransactions.map((t) => (
+                            <li key={t.id} onClick={() => handleClickTrx(t)}>
+                                {t.nombre}
+                            </li>                            
+                        ))}
                     </ol>
                   </fieldset>
                 </fieldset>
@@ -66,15 +95,15 @@ const Transacciones =()=>{
               <li className={styles.ladoDerecho}>
                 <fieldset className={styles.trxFieldset}>
                   <legend>Detalle</legend>
-                    <fieldset className={styles.detalleTrx}>
-                      <legend className={styles.trxTitle}>{TrxSeleccionada?.nombre || ''}</legend>
-                      <span className={styles.trxExplanation}>
-                        {TrxSeleccionada?.explicacion || ''}
-                      </span>
-                    </fieldset>                    
-                    <Link to={TrxSeleccionada?.nombre || ''}>
-                      <button className={styles.botonPaso}>Ejemplo de uso</button>
-                    </Link>
+                  <fieldset className={styles.detalleTrx}>
+                    <legend className={styles.trxTitle}>{TrxSeleccionada?.nombre || ''}</legend>
+                    <span className={styles.trxExplanation}>
+                      {TrxSeleccionada?.explicacion || ''}
+                    </span>
+                  </fieldset>                    
+                  <Link to={TrxSeleccionada?.nombre || ''}>
+                    <button className={styles.botonPaso}>Ejemplo de uso</button>
+                  </Link>
                 </fieldset>
               </li>
             </ul>

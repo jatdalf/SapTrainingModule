@@ -9,8 +9,36 @@
     background-size: 10vw; 
     min-height: 100vw; 
 } 
-.TrxVolver{
-    padding-left: 85%;
+.headercontainer {
+    display: flex;               /* Habilita Flexbox para alinear los elementos */
+    justify-content: space-between; /* Ajusta el espacio entre el input y el botón Volver */
+    align-items: center;          /* Alinea verticalmente los elementos al centro */
+    margin-bottom: 20px;          /* Añade algo de espacio debajo del contenedor */
+}
+.Buscador {
+    display: flex;
+    align-items: center;          /* Asegura que el input esté centrado verticalmente */
+    margin-left: 15vw;
+    background-color: white;
+    font-weight: 600;
+}
+.Buscador span {
+    margin-right: 10px;           /* Añade algo de espacio entre el texto y el input */
+    color:#0f6b69;    
+}
+.Buscador input {
+    padding: 8px;                 /* Espaciado interno del input */
+    border: 1px solid #ccc;       /* Borde del input */
+    border-radius: 4px;           /* Borde redondeado */
+    font-size: 16px;              /* Ajusta el tamaño del texto */
+    width: 250px;                 /* Ancho del input */
+    color:#0f6b69; 
+    font-weight: 700;
+}
+.TrxVolver{   
+    display: flex;
+    justify-content: flex-end;    /* Asegura que el botón de Volver esté alineado a la derecha */
+    margin-right: 10vw;
 }
 .contenedorTrx{
     display: flex;
@@ -145,8 +173,16 @@
     .Fondo{
         height: 140vw;
     }
-    .TrxVolver{
-        padding-left: 80%;
+    .Buscador {
+        margin-left: 0.1vw;
+        font-size: 3.5vw;
+    }    
+    .Buscador input {
+        margin-left: -8vw;
+        width: 180px;
+    }
+    .TrxVolver{ 
+        margin-right: 0vw;
     }
     .ladoIzquierdo{
         width: 20vw; 
