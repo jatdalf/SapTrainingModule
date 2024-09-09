@@ -36,6 +36,12 @@ const Transacciones = () => {
           nombre: 'migo',
           uso: 'Contabilizar documentos MIGO',
           explicacion: 'Transaccion utilizada para confirmar el arribo de un producto solicitado en una orden de compra, o para confirmar la realizacion de un servicio o trabajo solicitado en una orden de compra'
+        },
+        {
+          id: '5',
+          nombre: 'va01',
+          uso: 'Generar salida de materiales',
+          explicacion: 'Transaccion estandar utilizada para generar manualmente una salida de materiales, descontando del stock los insumos involucrados, en esta transaccion se deben ingresar uno por uno cada uno de los datos'
         }
     ]);   
 
