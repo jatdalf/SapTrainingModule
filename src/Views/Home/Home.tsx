@@ -1,8 +1,13 @@
 import styles from './Home.module.css';
 import logoOcasa from '../../Assets/LogoOcasaBig.png'
 import { Link } from "react-router-dom";
+import { useEffect } from 'react';
 
 const Home = ()=>{  
+    useEffect(() => {
+        window.scrollTo(0, 0);  // Mueve el scroll a la posición (0, 0)
+      }, []);  // Solo se ejecuta la primera vez que se carga el componente
+  
   
     return(
         <div className={styles.Home}>

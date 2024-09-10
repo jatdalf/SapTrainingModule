@@ -1,7 +1,8 @@
 import styles from './Transacciones.module.css'
 import { Link } from "react-router-dom";
 import Volver from '../../Component/Volver/Volver';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Dbtransaction } from '../../Db/Transactions';
 
 const Transacciones = () => {
     // Define una interfaz para los objetos de Transactions
@@ -12,38 +13,7 @@ const Transacciones = () => {
         explicacion: string;       
     }
 
-    const [transaction, setTransaction] = useState<Transaction[]>([
-        {
-            id: '1',
-            nombre: 'lt12',
-            uso: 'confirmacion de OT',
-            explicacion: 'Transaccion utilizada para la confirmacion de las Ordenes de Trabajo (OT)'
-        },
-        {
-          id: '2',
-          nombre: 'yupdcontimas',
-          uso: 'modificacion de datos web a nivel contingentacion',
-          explicacion: 'Transaccion utilizada para modificar los totales que se encuentran registrados en la tabla de contingentacion, y son visualizados por via web asociados por programas'
-        },
-        {
-          id: '3',
-          nombre: 'me51n',
-          uso: 'generación de solped',
-          explicacion: 'Transaccion utilizada en el proceso de generación de solicitudes para ordenes de compra, debe tener en cuenta que tiene que tener autorizado el GCp correspondiente (Grupo de compra)'
-        },
-        {
-          id: '4',
-          nombre: 'migo',
-          uso: 'Contabilizar documentos MIGO',
-          explicacion: 'Transaccion utilizada para confirmar el arribo de un producto solicitado en una orden de compra, o para confirmar la realizacion de un servicio o trabajo solicitado en una orden de compra'
-        },
-        {
-          id: '5',
-          nombre: 'va01',
-          uso: 'Generar salida de materiales',
-          explicacion: 'Transaccion estandar utilizada para generar manualmente una salida de materiales, descontando del stock los insumos involucrados, en esta transaccion se deben ingresar uno por uno cada uno de los datos'
-        }
-    ]);   
+    const [transaction, setTransaction] = useState<Transaction[]>(Dbtransaction);   
 
     const [TrxSeleccionada, setTrxSeleccionada] = useState<Transaction | null>(null);
     const [searchTerm, setSearchTerm] = useState<string>(''); // Estado para el valor del input de búsqueda
@@ -61,6 +31,11 @@ const Transacciones = () => {
     const filteredTransactions = transaction.filter(t =>
         t.nombre.toLowerCase().includes(searchTerm) // Filtrar las transacciones que coincidan con el término de búsqueda
     );
+    // useEffect para mover el scroll al inicio
+    useEffect(() => {
+      window.scrollTo(0, 0);  // Mueve el scroll a la posición (0, 0)
+    }, []);  // Solo se ejecuta la primera vez que se carga el componente
+
 
     return (
         <div>            

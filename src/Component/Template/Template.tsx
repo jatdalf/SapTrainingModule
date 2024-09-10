@@ -1,4 +1,4 @@
-import styles from './Yupdcontimas.module.css'
+import styles from './Template.module.css'
 import Volver from '../Volver/Volver';
 import imgVariante from '../../Assets/traerVariante.png'
 import ejecutar from '../../Assets/iconoEjecutar.png'
