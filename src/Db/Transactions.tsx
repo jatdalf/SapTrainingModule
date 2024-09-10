@@ -9,7 +9,7 @@ interface Transaction {
 const Dbtransaction =([
   {        
   id: '1',
-  nombre: 'lt12lt12',
+  nombre: 'lt12',
   uso: 'Confirmacion de OT',
   explicacion: 'Transacción utilizada para la confirmación de las Ordenes de Trabajo (OT)'}
 ,{        
