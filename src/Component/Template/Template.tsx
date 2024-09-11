@@ -3,26 +3,27 @@ import Volver from '../Volver/Volver';
 import imgVariante from '../../Assets/traerVariante.png'
 import ejecutar from '../../Assets/iconoEjecutar.png'
 import React, { useState } from 'react';
+import NavigationButtons from '../NavigationButtons/NavigationButtons';
 
 
 const Template = ()=>{
-    interface template {
+    interface Transaction {
         id: number;
         imagen: string;
         explicacion: string;
         extraImg?: string;  // Imagen adicional que quieras mostrar en el texto
       }
 
-      const imagen1: string= ""
-      const imagen2: string= ""
-      const imagen3: string= ""
-      const imagen4: string= ""
-      const imagen5: string= ""
-      const imagen6: string= ""
-      const imagen7: string= ""
-      const imagen8: string= ""    
+      const imagen1: string= "image1"
+      const imagen2: string= "image2"
+      const imagen3: string= "image3"
+      const imagen4: string= "image4"
+      const imagen5: string= "image5"
+      const imagen6: string= "image6"
+      const imagen7: string= "image7"
+      const imagen8: string= "image8"    
 
-      const [transaction] = useState<template[]>([
+      const [transaction] = useState<Transaction[]>([
         { id: 1, imagen:imagen1, explicacion: 'reloj ', extraImg: imgVariante },
         { id: 2, imagen:imagen2, explicacion: '&#10094;ENTER&#10095;' },
         { id: 3, imagen:imagen3, explicacion: 'Tanto' },
@@ -49,7 +50,7 @@ const Template = ()=>{
 
     
     return(
-        <div>
+      <div>
         <img src={transaction[currentStep - 1].imagen} className={styles.trxImage} alt="imagen de la transacción" />
         <fieldset className={styles.StepContainer}>
             <legend>Paso {currentStep}</legend>
@@ -59,26 +60,7 @@ const Template = ()=>{
             <img src={transaction[currentStep - 1].extraImg} className={styles.inlineImage} alt="Imagen adicional" />
             )}
         </fieldset>
-
-        <div className={styles.buttonsContainer}>
-          <button 
-            className={`${styles.leftArrow} ${currentStep === 1 ? styles.disabledButton : ''}`}
-            onClick={handlePrevious}
-            disabled={currentStep === 1} // Deshabilita si estamos en el primer paso
-            >&#10148;
-          </button>
-          <span className={styles.stepNumber}>PASO {currentStep}</span>
-          <button 
-            className={`${styles.rightArrow} ${currentStep === transaction.length ? styles.disabledButton : ''}`}
-            onClick={handleNext}
-            disabled={currentStep === transaction.length} // Deshabilita si estamos en el último paso
-            >&#10148;
-          </button>
-          <div className={styles.volverContainer}>
-            <Volver />
-          </div>
-        </div>
-
+        <NavigationButtons currentStep={currentStep} totalSteps={transaction.length} onPrevious={handlePrevious} onNext={handleNext} />
       </div>
     )
 }

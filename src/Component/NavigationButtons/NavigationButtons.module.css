@@ -1,26 +1,9 @@
-.trxImage{
-    width: 50vw;
-    height: 600px;
-    padding: 2.5% 2.5% 0%;  
-    overflow: auto;  
-    aspect-ratio: 4/3;   
+.buttonsContainer {   
+    margin-left: 10%;
+    display: flex; /* Utilizar flexbox para manejar los espacios */
+    align-items: center; /* Alinear elementos verticalmente al centro */
 }
 
-  
-.StepContainer{
-    position: relative;
-    margin-top: -40%;
-    left: 50%;
-    height: 400px;
-    width: 35vw;
-    padding: 0.1% 2% 0.1% 2%;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 10px;
-    overflow-y: auto;
-    border: solid 2px rgb(33, 108, 108);  
-    margin-bottom: 2%;
-}
 .leftArrow {
     border-radius: 5px;    
     background-color: rgb(29, 147, 147);  
@@ -31,17 +14,16 @@
     position: relative;
     padding: 3px 5px 5px 7px;
     top: 0.1px; /* Mover la flecha 5px hacia abajo */
-    margin-left: 55%;    
-
+    margin-left: 55%;
 }
+
 .leftArrow:hover{          
     transform: scale(1.2) rotate(180deg); /* Aumentar tamaño al 110% al hacer hover */
     color: red;
     background-color: rgb(29, 147, 147);  
 }
 
-.rightArrow {    
-    
+.rightArrow {        
     border-radius: 5px;
     background-color: rgb(29, 147, 147);  
     color: white;    
@@ -51,15 +33,11 @@
     padding: 3px 5px 5px 7px;
     top: 0.1px; /* Mover la flecha 5px hacia abajo */
 }
+
 .rightArrow:hover{
     transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
     color: red;
     background-color: rgb(29, 147, 147);  
-}
-.buttonsContainer {   
-    margin-left: 10%;
-    display: flex; /* Utilizar flexbox para manejar los espacios */
-    align-items: center; /* Alinear elementos verticalmente al centro */
 }
 
 .stepNumber {
@@ -80,17 +58,7 @@
     opacity: 0.5;             /* Hacer que el botón se vea más transparente */
 }
 
-
 @media only screen and (max-width: 500px) {
-    .trxImage{        
-        width: 94%;
-        aspect-ratio: 4/3;
-        object-fit: scale-down;
-        padding: 2.5% 2.5% 5%;
-        height: auto;        
-        overflow-x: visible;
-        overflow-y: visible;               
-    }
     .stepNumber{
         width: 25%;
     }
@@ -107,5 +75,4 @@
     .stepNumber {
         margin-left: 4%;
     }
-
 }

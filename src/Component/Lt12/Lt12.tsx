@@ -1,16 +1,15 @@
 import styles from './Lt12.module.css'
-import trxImage from '../../Assets/Lt12-01.png';
-import Volver from '../Volver/Volver';
 import React, { useState } from 'react';
+import NavigationButtons from '../NavigationButtons/NavigationButtons';
 
 const Lt12 = ()=>{
-    interface TrxLt12 {
+    interface Transaction {
         id: number;
         imagen: string;
         explicacion: string;
       }
     
-      const [trxLt12] = useState<TrxLt12[]>([
+      const [trxLt12] = useState<Transaction[]>([
         { id: 1, imagen:'https://static.wixstatic.com/media/ef3a14_2069ac222e73459c9e2c57901c6862a5~mv2.png', 
             explicacion: 'El primer campo a completar es el "Número de OT" donde ingresamos el numero de Orden de trabajo a confirmar\n\nLuego ingresamos el "Número de almacén" correspondiente a la Orden de trabajo que vamos a confirmar\n\nUna vez completos esos campos presionamos &#10094;ENTER&#10095;' },
         { id: 2, imagen:'https://static.wixstatic.com/media/ef3a14_7a1b0410e5464ad39b349a7ba4f4df5a~mv2.png',
@@ -45,31 +44,14 @@ const Lt12 = ()=>{
     return(
       <div>
         <img src={trxLt12[currentStep - 1].imagen} className={styles.trxImage} alt="imagen de la transacción" />
+        
         <fieldset className={styles.StepContainer}>
-        <legend>Paso {currentStep}</legend>
-        <p dangerouslySetInnerHTML={{ __html: trxLt12[currentStep - 1]?.explicacion.replace(/\n/g, '<br />') }} />
-        
+          <legend>Paso {currentStep}</legend>
+          <p dangerouslySetInnerHTML={{ __html: trxLt12[currentStep - 1]?.explicacion.replace(/\n/g, '<br />') }} />
         </fieldset>
+    
+        <NavigationButtons currentStep={currentStep} totalSteps={trxLt12.length} onPrevious={handlePrevious} onNext={handleNext} />
 
-        <div className={styles.buttonsContainer}>
-          <button 
-            className={`${styles.leftArrow} ${currentStep === 1 ? styles.disabledButton : ''}`}
-            onClick={handlePrevious}
-            disabled={currentStep === 1} // Deshabilita si estamos en el primer paso
-            >&#10148;
-          </button>
-          <span className={styles.stepNumber}>PASO {currentStep}</span>
-          <button 
-            className={`${styles.rightArrow} ${currentStep === trxLt12.length ? styles.disabledButton : ''}`}
-            onClick={handleNext}
-            disabled={currentStep === trxLt12.length} // Deshabilita si estamos en el último paso
-            >&#10148;
-          </button>
-          <div className={styles.volverContainer}>
-            <Volver />
-          </div>
-        </div>
-        
       </div>
     )
 }
