@@ -71,6 +71,13 @@
     margin-left: 15%; /* Separar el botón Volver del resto en un 25% */
 }
 
+.disabledButton {
+    background-color: #d3d3d3; /* Color gris opaco */
+    color: #a9a9a9;           /* Texto gris opaco */
+    cursor: not-allowed;      /* Cursor para indicar que está deshabilitado */
+    opacity: 0.5;             /* Hacer que el botón se vea más transparente */
+  }
+
 @media only screen and (max-width: 500px) {
     .trxImage{        
         width: 94%;

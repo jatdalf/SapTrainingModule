@@ -22,7 +22,7 @@ const Template = ()=>{
       const imagen7: string= ""
       const imagen8: string= ""    
 
-      const [trxYupdcontimas] = useState<template[]>([
+      const [transaction] = useState<template[]>([
         { id: 1, imagen:imagen1, explicacion: 'reloj ', extraImg: imgVariante },
         { id: 2, imagen:imagen2, explicacion: '&#10094;ENTER&#10095;' },
         { id: 3, imagen:imagen3, explicacion: 'Tanto' },
@@ -36,7 +36,7 @@ const Template = ()=>{
       const [currentStep, setCurrentStep] = useState<number>(1);
     
       const handleNext = () => {
-        if (currentStep < trxYupdcontimas.length) {
+        if (currentStep < transaction.length) {
           setCurrentStep(currentStep + 1);
         }
       };
@@ -50,23 +50,35 @@ const Template = ()=>{
     
     return(
         <div>
-        <img src={trxYupdcontimas[currentStep - 1].imagen} className={styles.trxImage} alt="imagen de la transacción" />
+        <img src={transaction[currentStep - 1].imagen} className={styles.trxImage} alt="imagen de la transacción" />
         <fieldset className={styles.StepContainer}>
             <legend>Paso {currentStep}</legend>
-            <p dangerouslySetInnerHTML={{ __html: trxYupdcontimas[currentStep - 1]?.explicacion.replace(/\n/g, '<br />') }} />
+            <p dangerouslySetInnerHTML={{ __html: transaction[currentStep - 1]?.explicacion.replace(/\n/g, '<br />') }} />
 
-            {trxYupdcontimas[currentStep - 1].extraImg && (
-            <img src={trxYupdcontimas[currentStep - 1].extraImg} className={styles.inlineImage} alt="Imagen adicional" />
+            {transaction[currentStep - 1].extraImg && (
+            <img src={transaction[currentStep - 1].extraImg} className={styles.inlineImage} alt="Imagen adicional" />
             )}
         </fieldset>
+
         <div className={styles.buttonsContainer}>
-          <button className={styles.leftArrow} onClick={handlePrevious}>&#10148;</button>
+          <button 
+            className={`${styles.leftArrow} ${currentStep === 1 ? styles.disabledButton : ''}`}
+            onClick={handlePrevious}
+            disabled={currentStep === 1} // Deshabilita si estamos en el primer paso
+            >&#10148;
+          </button>
           <span className={styles.stepNumber}>PASO {currentStep}</span>
-          <button className={styles.rightArrow} onClick={handleNext}>&#10148;</button>
+          <button 
+            className={`${styles.rightArrow} ${currentStep === transaction.length ? styles.disabledButton : ''}`}
+            onClick={handleNext}
+            disabled={currentStep === transaction.length} // Deshabilita si estamos en el último paso
+            >&#10148;
+          </button>
           <div className={styles.volverContainer}>
             <Volver />
           </div>
         </div>
+
       </div>
     )
 }

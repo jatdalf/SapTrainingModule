@@ -1,7 +1,5 @@
 import styles from './Va01.module.css'
 import Volver from '../Volver/Volver';
-import imgVariante from '../../Assets/traerVariante.png'
-import ejecutar from '../../Assets/iconoEjecutar.png'
 import React, { useState } from 'react';
 
 
@@ -79,9 +77,19 @@ const Va01 = ()=>{
             )}
         </fieldset>
         <div className={styles.buttonsContainer}>
-          <button className={styles.leftArrow} onClick={handlePrevious}>&#10148;</button>
+          <button 
+            className={`${styles.leftArrow} ${currentStep === 1 ? styles.disabledButton : ''}`}
+            onClick={handlePrevious}
+            disabled={currentStep === 1} // Deshabilita si estamos en el primer paso
+            >&#10148;
+          </button>
           <span className={styles.stepNumber}>PASO {currentStep}</span>
-          <button className={styles.rightArrow} onClick={handleNext}>&#10148;</button>
+          <button 
+            className={`${styles.rightArrow} ${currentStep === trxVa01.length ? styles.disabledButton : ''}`}
+            onClick={handleNext}
+            disabled={currentStep === trxVa01.length} // Deshabilita si estamos en el último paso
+            >&#10148;
+          </button>
           <div className={styles.volverContainer}>
             <Volver />
           </div>
