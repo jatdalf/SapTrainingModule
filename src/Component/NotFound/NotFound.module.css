@@ -1,0 +1,17 @@
+.notFoundContainer{
+    width: 100vw;
+}
+.notFoundImg{
+    width: 100vw;
+}
+.volverButtonContainer{    
+    margin-left: 45%;
+    margin-top: -12%;
+}
+
+@media only screen and (max-width: 500px) {
+    .volverButtonContainer{    
+        margin-left: 40%;
+        margin-top: 5%;
+    }
+}
