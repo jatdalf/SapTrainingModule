@@ -13,9 +13,16 @@ const Home = ()=>{
         <div className={styles.Home}>
             <img src={logoOcasa} className={styles.HomeLogo} alt="logo" />  
             <div className={styles.Fondo}>
+              <div className={styles.transactionsButtonContainer}>
                 <Link to='/Transacciones'>
                     <button className={styles.Transacciones}>Transacciones</button>
                 </Link>
+              </div>
+              <div className={styles.processButtonContainer}>
+                <Link to='/Procesos'>
+                    <button className={styles.Transacciones}>Procesos</button>
+                </Link>
+              </div>
             </div>
         </div>
     )

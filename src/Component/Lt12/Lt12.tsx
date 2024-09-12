@@ -19,7 +19,7 @@ const Lt12 = ()=>{
         { id: 4, imagen:'https://static.wixstatic.com/media/ef3a14_f8992232e32b46d78bab7aab10a0aeb6~mv2.png',
         explicacion: 'Si usamos la opcion de agregar bultos al envio, veremos esta pantalla donde debemos ingresar:\nEl Peso y las medidas del bulto adicional (o los bultos adicionales)\n\nNota: esto vale para todos los bultos, por ejemplo si agregamos 5 bultos el peso y las medidas agregadas en esta seccion se aplicaran 5 veces, una por cada bulto\n\nEn caso de que necesitemos agregar bultos con diferentes pesos y medidas se debe repetir esta accion una vez por cada bulto con diferente peso y medida hasta completar el envio total' },
         { id: 5, imagen:'https://static.wixstatic.com/media/ef3a14_8598a7d509b546a79b6ae743ad76f6fb~mv2.png',
-        explicacion: 'Una vez que estan todos los bultos con su peso y tamaño agregados, los campos verificados y las observaciones asentadas(si las hubiere)\nProcedemos a grabar los datos (Click en el icono del disco)' },
+        explicacion: 'Una vez que estan todos los bultos con su peso y tamaño agregados, los campos verificados y las observaciones asentadas (si las hubiere)\nProcedemos a grabar los datos (Click en el icono del disco)' },
         { id: 6, imagen:'https://static.wixstatic.com/media/ef3a14_2c89a3d1aeb6467eb94a62562571e752~mv2.png',
         explicacion: 'El sistema procesara los datos, descontara del stock los materiales involucrados y nos devolvera un número de equipo\n\nEse es el número unico de seguimiento interno' },
         { id: 7, imagen:'https://static.wixstatic.com/media/ef3a14_a06c4955c08047929de2118b9227f45c~mv2.png',

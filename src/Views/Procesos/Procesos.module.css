@@ -1,0 +1,235 @@
+.Fondo{
+    border-radius: 15px;
+    height: 80vw;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-image: url(../../Assets/FondoOcasa.svg);
+    background-repeat: repeat; 
+    background-size: 10vw; 
+    min-height: 100vw; 
+} 
+.headercontainer {
+    display: flex;               /* Habilita Flexbox para alinear los elementos */
+    justify-content: space-between; /* Ajusta el espacio entre el input y el botón Volver */
+    align-items: center;          /* Alinea verticalmente los elementos al centro */
+    margin-bottom: 20px;          /* Añade algo de espacio debajo del contenedor */
+}
+.Buscador {
+    display: flex;
+    align-items: center;          /* Asegura que el input esté centrado verticalmente */
+    margin-left: 15vw;
+    background-color: white;
+    font-weight: 600;
+}
+.Buscador span {
+    margin-right: 10px;           /* Añade algo de espacio entre el texto y el input */
+    color:#0f6b69;    
+}
+.Buscador input {
+    padding: 8px;                 /* Espaciado interno del input */
+    border: 1px solid #ccc;       /* Borde del input */
+    border-radius: 4px;           /* Borde redondeado */
+    font-size: 16px;              /* Ajusta el tamaño del texto */
+    width: 250px;                 /* Ancho del input */
+    color:#0f6b69; 
+    font-weight: 700;
+}
+.TrxVolver{   
+    display: flex;
+    justify-content: flex-end;    /* Asegura que el botón de Volver esté alineado a la derecha */
+    margin-right: 10vw;
+}
+.contenedorTrx{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center; /* Alinear los elementos al principio */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center; /* Alinear los elementos verticalmente */
+}
+.ladoIzquierdo{
+    width: 25vw;    
+}
+.ladoDerecho{
+    width: 48vw;
+}
+.trxFieldset{
+    margin-left: 2%;
+    margin-right: 2%;
+    border: #0f6b69 3px solid;
+    background: rgb(185,185,185);
+    background: linear-gradient(0deg, rgb(235, 227, 227) 19%, rgb(243, 237, 237) 86%);
+    font-weight: 600;
+    height: 40vw;
+}
+.listadoTrx{
+    background-color: rgb(255, 255, 255);
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 42vw;
+    overflow-x: auto; 
+    max-height: 34vw;
+    white-space: nowrap;
+    font-size:1vw;
+}
+.listado{
+    counter-reset: li; 
+    list-style: none; 
+    *list-style: decimal; 
+    font: 1.3em 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.listado ol {
+    margin: 0 0 0 2em; 
+}
+.listado li{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: rgb(232, 226, 226);
+    color: #444;
+    text-decoration: none;
+    transition: all .3s ease-out;   
+}
+.listado li:hover{
+    background: rgb(3, 250, 209);
+}   
+.listado li:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute; 
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: rgb(3, 250, 209);
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+.listado li:after{
+    position: absolute; 
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;               
+}
+.listado li:hover:after{
+    left: -.5em;
+    border-left-color: rgb(3, 250, 209);         
+}
+.detalleTrx{
+    background-color: rgb(255, 255, 255);
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-color: #0f6b69;
+    border: solid 1px;
+    height: 24vw;
+    position: relative; /* Asegura que los elementos hijos con position: absolute o relative se posicionen en relación a este contenedor */
+}
+.trxTitle{
+    text-transform: uppercase;
+    color:#0f6b69;
+    font-weight: 700;
+    margin-left: calc(50% - 35px - 8px);  
+}
+.trxExplanation{
+    display: block; /* Asegura que el span se comporte como un bloque, ocupando todo el ancho disponible */
+    margin-top: 5%; /* Aplica un margen superior del 10% del contenedor padre */
+    padding-left: 1vw; /* Opcional: para añadir un poco de margen a la izquierda si es necesario */
+    padding-right: 1vw; /* Opcional: para añadir un poco de margen a la derecha si es necesario */
+}
+.botonPaso{
+    background-color: white;
+    margin-top: 4%;
+    margin-left: 40%;
+    padding: 10px 10px 10px 10px;
+    color:rgb(29, 147, 147);
+    font-weight: 700;
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 28px, rgba(0, 0, 0, 0.22) 10px 10px 10px;
+    transition: transform 0.5s ease; /* Añadir transición suave */
+}
+.botonPaso:hover{    
+    transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
+    color: white;
+    background-color: rgb(29, 147, 147);  
+}
+
+/* Responsive Screens */
+@media only screen and (max-width: 500px) {
+    .Fondo{
+        height: 140vw;
+    }
+    .Buscador {
+        margin-left: 0.1vw;
+        font-size: 3.5vw;
+    }    
+    .Buscador input {
+        margin-left: -1.8vw;
+        width: 180px;
+    }
+    .TrxVolver{ 
+        margin-right: 0vw;
+    }
+    .ladoIzquierdo{
+        width: 20vw; 
+        margin-left: -2vw;   
+    }
+    .ladoDerecho{
+        margin-left: 20vw;
+    }
+    .trxFieldset{
+        margin-left: -1%;
+        margin-right: 0%;
+        height: 100vw;
+    }
+    .listadoTrx{        
+        margin-top: 0.1vw;
+        margin-left: 0.1vw;
+        margin-right: 0.1vw;
+        height: 92vw;        
+        max-height: 84vw;       
+        font-size: 1vw;              
+    }
+    .listado{
+        font-size: 2.5em;
+    }
+    .listado li{ 
+        padding: .2em .2em .4em .4em;
+        *padding: .2em;
+        margin: .5em 0 .5em 2.5em;       
+        color: rgb(0, 0, 0);      
+    }
+    .detalleTrx{       
+        margin-top: 2vw;
+        margin-left: 0.1vw;
+        margin-right: 0.1vw;
+        height: 78vw;
+        position: relative; /* Asegura que los elementos hijos con position: absolute o relative se posicionen en relación a este contenedor */
+        overflow-y: auto;        
+    }
+    .trxExplanation{
+        display: block; /* Asegura que el span se comporte como un bloque, ocupando todo el ancho disponible */
+        margin-top: 2%; /* Aplica un margen superior del 10% del contenedor padre */
+        padding-left: 0vw; /* Opcional: para añadir un poco de margen a la izquierda si es necesario */
+        padding-right: 0vw; /* Opcional: para añadir un poco de margen a la derecha si es necesario */
+    }
+   
+    .botonPaso{
+       margin-left: 15%;
+       margin-top: 5%;
+    }
+  }
