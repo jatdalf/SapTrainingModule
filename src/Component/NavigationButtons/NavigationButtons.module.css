@@ -44,7 +44,7 @@
     padding-left: 2%;
     padding-right: 2%;    
     font-weight: 600;
-    width: 5vw;
+    width: 60px;
 }
 
 .volverContainer {
@@ -74,5 +74,6 @@
     }
     .stepNumber {
         margin-left: 4%;
+        width: 80px;
     }
 }

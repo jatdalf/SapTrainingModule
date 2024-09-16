@@ -1,11 +1,11 @@
-import styles from './Template.module.css'
+import styles from './ProcesoMe51n.module.css'
 import imgVariante from '../../Assets/traerVariante.png'
 import ejecutar from '../../Assets/iconoEjecutar.png'
 import React, { useState } from 'react';
 import NavigationButtons from '../NavigationButtons/NavigationButtons';
+import { Link } from "react-router-dom";
 
-
-const Template = ()=>{
+const ProcesoMe51n = ()=>{
     interface Transaction {
         id: number;
         imagen: string;
@@ -13,25 +13,15 @@ const Template = ()=>{
         extraImg?: string;  // Imagen adicional que quieras mostrar en el texto
       }
 
-      const imagen1: string= "image1"
-      const imagen2: string= "image2"
-      const imagen3: string= "image3"
-      const imagen4: string= "image4"
-      const imagen5: string= "image5"
-      const imagen6: string= "image6"
-      const imagen7: string= "image7"
-      const imagen8: string= "image8"    
+      const imagen1: string= "https://static.wixstatic.com/media/ef3a14_db6bc7dd3ab040b0805417055de18463~mv2.png"
+       
 
       const [transaction] = useState<Transaction[]>([
-        { id: 1, imagen:imagen1, explicacion: 'reloj ', extraImg: imgVariante },
-        { id: 2, imagen:imagen2, explicacion: '&#10094;ENTER&#10095;' },
-        { id: 3, imagen:imagen3, explicacion: 'Tanto' },
-        { id: 4, imagen:imagen4, explicacion: '"&#10004;" (tilde verde)' },
-        { id: 5, imagen:imagen5, explicacion: '"&#10006;" (cruz roja)' },
-        { id: 6, imagen:imagen6, explicacion: 'Volveremos ', extraImg: ejecutar },
-        { id: 7, imagen:imagen7, explicacion: 'El sistema ' },
-        { id: 8, imagen:imagen8, explicacion: 'Por último' }
-         ]);
+        { id: 1, 
+          imagen:imagen1, 
+          explicacion: 'La generación de una solicitud de pedido (Solped) nace de una necesidad puntual, como ejemplo puede tratarse de la necesidad de adquisición de un bien (mueble, electrodoméstico, insumo, etc), de la contratación de un servicio (alquiler, revisiones médicas, cortes de cesped, etc.), o de cualquier otra necesidad por la que necesitamos generar en una Orden de Compra.\n\nA continuación realiza click sobre el botón que deseas para observar un caso de uso: '
+        },
+      ]);
     
       const [currentStep, setCurrentStep] = useState<number>(1);
     
@@ -58,10 +48,18 @@ const Template = ()=>{
             {transaction[currentStep - 1].extraImg && (
             <img src={transaction[currentStep - 1].extraImg} className={styles.inlineImage} alt="Imagen adicional" />
             )}
+            <div className={styles.buttonContainer}>
+              <Link to="/Procesos/ProcesoMe51nRH">
+                <button className={styles.ButtonCaso}>Caso RRHH</button>
+              </Link>
+            </div>    
         </fieldset>
-        <NavigationButtons currentStep={currentStep} totalSteps={transaction.length} onPrevious={handlePrevious} onNext={handleNext} />
+        
+        <div className={styles.navigationContainer}>
+          <NavigationButtons currentStep={currentStep} totalSteps={transaction.length} onPrevious={handlePrevious} onNext={handleNext} />
+        </div>
       </div>
     )
 }
     
-export default Template
+export default ProcesoMe51n

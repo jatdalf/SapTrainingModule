@@ -12,6 +12,9 @@ import Va01 from './Component/Va01/Va01';
 import Migo from './Component/Migo/Migo';
 import Me21n from './Component/Me21n/Me21n';
 
+import ProcesoMe51n from './Component/ProcesoMe51n/ProcesoMe51n';
+import ProcesoMe51nRH from './Component/ProcesoMe51nRH/ProcesoMe51nRH';
+
 function App() {
   return (  <Router>
       <Routes>
@@ -30,6 +33,8 @@ function App() {
 
         {/* Sección de Procesos */}
         <Route path="/Procesos" element={<Procesos/>}></Route>        
+        <Route path="/Procesos/ProcesoMe51n" element={<ProcesoMe51n/>}></Route>        
+        <Route path="/Procesos/ProcesoMe51nRH" element={<ProcesoMe51nRH/>}></Route>        
 
       </Routes>
     </Router>

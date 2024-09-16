@@ -21,64 +21,11 @@
     border: solid 2px rgb(33, 108, 108);  
     margin-bottom: 2%;
 }
-.leftArrow {
-    border-radius: 5px;    
-    background-color: rgb(29, 147, 147);  
-    color: white;    
-    border: none;
-    display: inline-block;
-    transform: rotate(180deg); /* Rotar la flecha 180 grados */
-    position: relative;
-    padding: 3px 5px 5px 7px;
-    top: 0.1px; /* Mover la flecha 5px hacia abajo */
-    margin-left: 55%;    
-
-}
-.leftArrow:hover{          
-    transform: scale(1.2) rotate(180deg); /* Aumentar tamaño al 110% al hacer hover */
-    color: red;
-    background-color: rgb(29, 147, 147);  
-}
-
-.rightArrow {    
-    
-    border-radius: 5px;
-    background-color: rgb(29, 147, 147);  
-    color: white;    
-    border: none;
-    display: inline-block;    
-    position: relative;
-    padding: 3px 5px 5px 7px;
-    top: 0.1px; /* Mover la flecha 5px hacia abajo */
-}
-.rightArrow:hover{
-    transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
-    color: red;
-    background-color: rgb(29, 147, 147);  
-}
-.buttonsContainer {   
-    margin-left: 10%;
-    display: flex; /* Utilizar flexbox para manejar los espacios */
-    align-items: center; /* Alinear elementos verticalmente al centro */
-}
-
-.stepNumber {
-    padding-left: 2%;
-    padding-right: 2%;    
-    font-weight: 600;
-    width: 5vw;
-}
 
 .volverContainer {
     margin-left: 15%; /* Separar el botón Volver del resto en un 25% */
 }
 
-.disabledButton {
-    background-color: #d3d3d3; /* Color gris opaco */
-    color: #a9a9a9;           /* Texto gris opaco */
-    cursor: not-allowed;      /* Cursor para indicar que está deshabilitado */
-    opacity: 0.5;             /* Hacer que el botón se vea más transparente */
-}
 
 
 @media only screen and (max-width: 500px) {
@@ -91,21 +38,6 @@
         overflow-x: visible;
         overflow-y: visible;               
     }
-    .stepNumber{
-        width: 25%;
-    }
-    .StepContainer{
-        position: relative;
-        margin-top: -5%;
-        left: 0%;
-        height: 200px;
-        width: 82vw;
-    }
-    .leftArrow {
-        margin-left: 10%;
-    }
-    .stepNumber {
-        margin-left: 4%;
-    }
+ 
 
 }

@@ -8,8 +8,8 @@ const Procesos = () => {
     // Define una interfaz para los objetos de Procesos
     interface Procesos {
         id: string;
-        nombre: string;
-        uso: string;
+        nombre: string;   
+        destino: string;    
         explicacion: string;       
     }
 
@@ -82,7 +82,7 @@ const Procesos = () => {
                       {ProcesoSelected?.explicacion || ''}
                     </span>
                   </fieldset>                    
-                  <Link to={ProcesoSelected?.nombre || ''}>
+                  <Link to={ProcesoSelected?.destino || ''}>
                     <button className={styles.botonPaso}>Caso de ejemplo</button>
                   </Link>
                 </fieldset>

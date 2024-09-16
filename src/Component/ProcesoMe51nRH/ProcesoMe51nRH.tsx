@@ -1,11 +1,11 @@
-import styles from './Template.module.css'
+import styles from './ProcesoMe51nRH.module.css'
 import imgVariante from '../../Assets/traerVariante.png'
 import ejecutar from '../../Assets/iconoEjecutar.png'
 import React, { useState } from 'react';
 import NavigationButtons from '../NavigationButtons/NavigationButtons';
 
 
-const Template = ()=>{
+const ProcesoMe51nRH = ()=>{
     interface Transaction {
         id: number;
         imagen: string;
@@ -13,14 +13,17 @@ const Template = ()=>{
         extraImg?: string;  // Imagen adicional que quieras mostrar en el texto
       }
 
-      const imagen1: string= "image1"
-      const imagen2: string= "image2"
-      const imagen3: string= "image3"
-      const imagen4: string= "image4"
-      const imagen5: string= "image5"
-      const imagen6: string= "image6"
-      const imagen7: string= "image7"
-      const imagen8: string= "image8"    
+      const imagen1: string= "https://static.wixstatic.com/media/ef3a14_7240abbe74a14f2e8e9d16af389caa4d~mv2.png"
+      const imagen2: string= "https://static.wixstatic.com/media/ef3a14_261d6d0152c8422f99ca5744692cafed~mv2.png"
+      const imagen3: string= "https://static.wixstatic.com/media/ef3a14_85891a77a81d4225ab2478ed501fcce4~mv2.png"
+      const imagen4: string= "https://static.wixstatic.com/media/ef3a14_df6951c4d2c04f02af37c5483a56c56d~mv2.png"
+      const imagen5: string= "https://static.wixstatic.com/media/ef3a14_908f91bed5d845799bae2b51729160bc~mv2.png"
+      const imagen6: string= "https://static.wixstatic.com/media/ef3a14_f8e694a4e9a14f0187d45d21e7037ac2~mv2.png"
+      const imagen7: string= "https://static.wixstatic.com/media/ef3a14_12b98fef48eb4b7aa9022f60d839bbbb~mv2.png"
+      const imagen8: string= "https://static.wixstatic.com/media/ef3a14_3cc0b4e2ff1440f8b3616b5084165425~mv2.png"    
+      const imagen9: string= "https://static.wixstatic.com/media/ef3a14_d4a1ad7536604291af85a6474b49b1ad~mv2.png"
+      const imagen10: string= "https://static.wixstatic.com/media/ef3a14_e528e375c6e5483caaf5185dca938a7e~mv2.png"
+      const imagen11: string= "https://static.wixstatic.com/media/ef3a14_d01468534e4a4a3fa648ce3b9660f3df~mv2.png"
 
       const [transaction] = useState<Transaction[]>([
         { id: 1, imagen:imagen1, explicacion: 'reloj ', extraImg: imgVariante },
@@ -64,4 +67,4 @@ const Template = ()=>{
     )
 }
     
-export default Template
+export default ProcesoMe51nRH

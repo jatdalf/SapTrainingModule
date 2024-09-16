@@ -1,0 +1,78 @@
+.trxImage{
+    width: 88vw;
+    height: 400px;
+    padding: 2.5% 2.5% 0%;  
+    overflow: auto;      
+    aspect-ratio: 4/3;   
+    margin-left: 4vw;
+}
+  
+.StepContainer{
+    position: relative;
+    margin-top: 1%;   
+    height: 250px;
+    width: 86vw;
+    padding: 0.1% 2% 0.1% 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    overflow-y: auto;
+    border: solid 2px rgb(33, 108, 108);  
+    margin-bottom: 2%;
+}
+.volverContainer {
+    margin-left: 15%; /* Separar el botón Volver del resto en un 25% */
+}
+
+.buttonContainer{
+    position: relative;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    margin-top: 3%;
+}
+.ButtonCaso{
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 28px, rgba(0, 0, 0, 0.22) 10px 10px 10px;
+    transition: transform 0.5s ease; /* Añadir transición suave */
+    font-weight: 700;
+    padding: 10px 20px 10px 20px;
+    font-weight: 700;
+    color: rgb(29, 147, 147);
+}
+.ButtonCaso:hover{    
+    transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
+    color: white;
+    background-color: rgb(29, 147, 147);  
+}
+.navigationContainer{
+    margin-left: -70%;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .trxImage{        
+        width: 88%;
+        aspect-ratio: 4/3;
+        object-fit: scale-down;
+        padding: 2.5% 2.5% 5%;
+        height: auto;        
+        margin-top: -10%;
+        overflow-x: visible;
+        overflow-y: visible;               
+    }
+    .StepContainer{
+        margin-top: -20%;
+        left: 0%;
+        width: 84vw;
+        height: 400px;
+    }
+    .buttonContainer{
+        margin-top: 10%;
+    }
+    .navigationContainer{
+        margin-left: 0%;
+    }
+    
+}
