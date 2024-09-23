@@ -1,5 +1,6 @@
 .trxImage{
     width: 90%;
+    height: 35vw;
     padding: 2.5% 2.5% 0%;
 }
 .StepContainer{
@@ -69,6 +70,7 @@
 @media only screen and (max-width: 500px) {
     .trxImage{
         width: 94%;
+        height: 40vw;
         padding: 2.5% 2.5% 5%;
     }
     .stepNumber{

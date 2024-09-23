@@ -14,11 +14,17 @@ const ProcesoMe51nRH = ()=>{
       }
 
       const imagen1: string= "https://static.wixstatic.com/media/ef3a14_7240abbe74a14f2e8e9d16af389caa4d~mv2.png"
-      const imagen2: string= "https://static.wixstatic.com/media/ef3a14_261d6d0152c8422f99ca5744692cafed~mv2.png"
-      const imagen3: string= "https://static.wixstatic.com/media/ef3a14_85891a77a81d4225ab2478ed501fcce4~mv2.png"
-      const imagen4: string= "https://static.wixstatic.com/media/ef3a14_df6951c4d2c04f02af37c5483a56c56d~mv2.png"
-      const imagen5: string= "https://static.wixstatic.com/media/ef3a14_908f91bed5d845799bae2b51729160bc~mv2.png"
-      const imagen6: string= "https://static.wixstatic.com/media/ef3a14_f8e694a4e9a14f0187d45d21e7037ac2~mv2.png"
+      const imagen2: string= "https://static.wixstatic.com/media/ef3a14_7472fde0f9a04a369ad7a1322adf824e~mv2.png"
+      const imagen3: string= "https://static.wixstatic.com/media/ef3a14_a0c2877ec03e4fa3adb2878aa1b7501d~mv2.png"
+      const imagen4: string= "https://static.wixstatic.com/media/ef3a14_2e0a300829444c778b88547920cb6fa5~mv2.png"      
+      const imagen5: string= "https://static.wixstatic.com/media/ef3a14_0890ec056eca4d559f2c342180358c06~mv2.png"
+      const imagen6: string= "https://static.wixstatic.com/media/ef3a14_0440e438028a42feaacd4eaaf3bc6be9~mv2.png"
+      
+      const imagenx2: string= "https://static.wixstatic.com/media/ef3a14_261d6d0152c8422f99ca5744692cafed~mv2.png"
+      const imagenx3: string= "https://static.wixstatic.com/media/ef3a14_85891a77a81d4225ab2478ed501fcce4~mv2.png"
+      const imagenx4: string= "https://static.wixstatic.com/media/ef3a14_df6951c4d2c04f02af37c5483a56c56d~mv2.png"
+      const imagenx5: string= "https://static.wixstatic.com/media/ef3a14_908f91bed5d845799bae2b51729160bc~mv2.png"
+      const imagenx6: string= "https://static.wixstatic.com/media/ef3a14_f8e694a4e9a14f0187d45d21e7037ac2~mv2.png"
       const imagen7: string= "https://static.wixstatic.com/media/ef3a14_12b98fef48eb4b7aa9022f60d839bbbb~mv2.png"
       const imagen8: string= "https://static.wixstatic.com/media/ef3a14_3cc0b4e2ff1440f8b3616b5084165425~mv2.png"    
       const imagen9: string= "https://static.wixstatic.com/media/ef3a14_d4a1ad7536604291af85a6474b49b1ad~mv2.png"
@@ -26,11 +32,11 @@ const ProcesoMe51nRH = ()=>{
       const imagen11: string= "https://static.wixstatic.com/media/ef3a14_d01468534e4a4a3fa648ce3b9660f3df~mv2.png"
 
       const [transaction] = useState<Transaction[]>([
-        { id: 1, imagen:imagen1, explicacion: 'reloj ', extraImg: imgVariante },
-        { id: 2, imagen:imagen2, explicacion: '&#10094;ENTER&#10095;' },
-        { id: 3, imagen:imagen3, explicacion: 'Tanto' },
-        { id: 4, imagen:imagen4, explicacion: '"&#10004;" (tilde verde)' },
-        { id: 5, imagen:imagen5, explicacion: '"&#10006;" (cruz roja)' },
+        { id: 1, imagen:imagen1, explicacion: 'En este caso de ejemplo, tenemos la necesidad de reaalizar una OC por servicios médicos prestados\n\nEn este caso puntual tenemos dos categorías:\n"Medicación & Imagenes"\n"Control de ausentismo"' },
+        { id: 2, imagen:imagen2, explicacion: 'Ingresamos a la transaccion SAP ME51N\n\nVerificamos que al costado del icono del carrito, se encuentre seleccionada "Solicitud de Pedido"\n\nRealizamos click sobre el icono de "Cabecera"' },
+        { id: 3, imagen:imagen3, explicacion: 'Visualizaremos un sector donde podremos agregar una descripción breve sobre el motivo de la solicitud que estamos realizando\n\nUna vez completo el resumen, volvemos a realizar click sobre el mismo Icono de Cabecera' },
+        { id: 4, imagen:imagen4, explicacion: 'En la siguiente sección visualizaremos una grilla, donde iremos completando las siguientes columnas:\n\n*La columna "Pos" dejamos en blanco\n*La columna "I" completamos con una letra "k" para items con centro de costo, o con una letra "a" para items con Activo Fijo\n(Requieren numero de activo fijo todos aquellos productos que se consideren un bien perdurable, y superen un monto determinado en $, como por ejemplo un microondas, una silla de escritorio, un locker, etc)\nLos Servicios, como en este ejemplo, no son activos fijos, por lo que van por centro de costo\nAnte dudas o consultas sobre si un material requiere o no activo fijo, enviar mail a altasactivosfijos@ocasa.com\n\n*El siguiente campo a completar es el número de material, si no contamos con un número específico de material, seleccionaremos de la lista uno genérico que se ajuste al item que estamos solicitando\nPara esto realizamos click sobre el icono de la derecha que aparece al posicionarnos sobre la celda, esto desplegara una nueva ventana\nNos posicionamos sobre la pestaña "Número / Texto breve de material", aqui en el campo "MATERIAL" ingresamos el texto OCASA0* y presionamos &#10094;ENTER&#10095;' },
+        { id: 5, imagen:imagen5, explicacion: 'Seleccionamos el material que se ajuste mas a nuestro caso, en este ejemplo seleccionaremos "SERVICIOS EN GENERAL" que corresponde al material OCASA008\n(Hacemos doble click sobre esa linea)' },
         { id: 6, imagen:imagen6, explicacion: 'Volveremos ', extraImg: ejecutar },
         { id: 7, imagen:imagen7, explicacion: 'El sistema ' },
         { id: 8, imagen:imagen8, explicacion: 'Por último' }
