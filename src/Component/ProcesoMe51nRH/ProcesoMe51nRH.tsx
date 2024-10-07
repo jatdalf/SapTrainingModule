@@ -51,15 +51,15 @@ const ProcesoMe51nRH = ()=>{
         { id: 6, imagen:imagen6, explicacion: '*En el campo "Texto Breve", por ahora no ingresaremos nada (si ingresamos algo el sistema lo cambiara por el texto SERVICIOS EN GENERAL)\n*Ingresamos la Cantidad en el campo correspondiente\n*En el campo UM no hace falta ingresar nada (Podemos ingresar UN o el sistema lo hara solo)\n*En "Fecha de entrega" ingresamos la fecha tentativa de entrega o como es un servicio en este caso le ponemos la fecha del mes en curso\n*En el campo "Centro" ingresamos la sucursal a la que corresponde el servicio\n*En el campo "Almacen" seleccionamos el correspondiente (normalmente General)\n*En el campo "GCp" ingresamos el Grupo de compras a la que corresponde imputar el gasto, para este ejemplo es RH (Recursos Humanos)\n*Por último en el campo "N°nec" ingresamos el número de Proyecto relacionado al gasto en cuestión, si el mismo no esta relacionado a ningún proyecto introducimos el número cero "0" (En la practica es lo que hacemos la mayoria de las veces)\n\nLuego de completar los campos mencionados presionaremos &#10094;ENTER&#10095;'},
         { id: 7, imagen:imagen7, explicacion: 'Ahora procedemos a modificar el "Texto breve" con un texto que resuma el item que estamos registrando\n\nLuego buscamos en la sección siguiente, la pestaña "Imputación", e intoducimos la cuenta mayor en el campo "Cta.mayor"\nSi no conocemos ese número lo podemos buscar haciendo click en el icono que se muestra en la imagen' },
         { id: 8, imagen:imagen8, explicacion: 'El sistema nos mostrará esta ventana, nos posicionamos en la pestaña "Denominación de las cuentas de mayor en la sociedad", y en el campo "Texto explicativo" ingresamos el texto que queremos buscar entre asteriscos\nPara este ejemplo sobre medicina ingresaremos *medic* y presionamos &#10094;ENTER&#10095;' },
-        { id: 8, imagen:imagen9, explicacion: 'Por último' },
-        { id: 8, imagen:imagen10, explicacion: 'Por último' },
-        { id: 8, imagen:imagen11, explicacion: 'Por último' },
-        { id: 8, imagen:imagen12, explicacion: 'Por último' },
-        { id: 8, imagen:imagen13, explicacion: 'Por último' },
-        { id: 8, imagen:imagen14, explicacion: 'Por último' },
-        { id: 8, imagen:imagen15, explicacion: 'Por último' },
-        { id: 8, imagen:imagen16, explicacion: 'Por último' },
-        { id: 8, imagen:imagen17, explicacion: 'Por último' }
+        { id: 8, imagen:imagen9, explicacion: '' },
+        { id: 8, imagen:imagen10, explicacion: '' },
+        { id: 8, imagen:imagen11, explicacion: '' },
+        { id: 8, imagen:imagen12, explicacion: '' },
+        { id: 8, imagen:imagen13, explicacion: '' },
+        { id: 8, imagen:imagen14, explicacion: '' },
+        { id: 8, imagen:imagen15, explicacion: '' },
+        { id: 8, imagen:imagen16, explicacion: '' },
+        { id: 8, imagen:imagen17, explicacion: '' }
          ]);
     
       const [currentStep, setCurrentStep] = useState<number>(1);
