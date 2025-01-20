@@ -11,6 +11,8 @@ import Yupdcontimas from './Component/Yupdcontimas/Yupdcontimas';
 import Va01 from './Component/Va01/Va01';
 import Migo from './Component/Migo/Migo';
 import Me21n from './Component/Me21n/Me21n';
+import Ysd_imposicion from './Component/Ysd_imposicion/Ysd_imposicion';
+import Ylt12 from './Component/Ylt12/Ylt12';
 
 import ProcesoMe51n from './Component/ProcesoMe51n/ProcesoMe51n';
 import ProcesoMe51nRH from './Component/ProcesoMe51nRH/ProcesoMe51nRH';
@@ -24,12 +26,15 @@ function App() {
 
         {/* Sección de transacciones */}
         <Route path="/Transacciones" element={<Transacciones/>}></Route>        
-        <Route path="/Transacciones/Lt12" element={<Lt12 />}></Route>  
+        <Route path="/Transacciones/Lt12" element={<Lt12 />}></Route> 
+        <Route path="/Transacciones/Ylt12" element={<Ylt12 />}></Route>   
         <Route path="/Transacciones/Yupdcontimas" element={<Yupdcontimas />}></Route>   
         <Route path="/Transacciones/Me51n" element={<Me51n />}></Route>
         <Route path="/Transacciones/Va01" element={<Va01 />}></Route>
         <Route path="/Transacciones/Migo" element={<Migo />}></Route>
         <Route path="/Transacciones/Me21n" element={<Me21n />}></Route>
+        <Route path="/Transacciones/Ysd_imposicion" element={<Ysd_imposicion />}></Route>
+
 
         {/* Sección de Procesos */}
         <Route path="/Procesos" element={<Procesos/>}></Route>        

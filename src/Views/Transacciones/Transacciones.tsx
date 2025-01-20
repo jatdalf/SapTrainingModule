@@ -4,6 +4,7 @@ import Volver from '../../Component/Volver/Volver';
 import React, { useEffect, useState } from 'react';
 import { Dbtransaction } from '../../Db/Transactions';
 
+
 const Transacciones = () => {
     // Define una interfaz para los objetos de Transactions
     interface Transaction {
@@ -76,7 +77,7 @@ const Transacciones = () => {
               <li className={styles.ladoDerecho}>
                 <fieldset className={styles.trxFieldset}>
                   <legend>Detalle</legend>
-                  <fieldset className={styles.detalleTrx}>
+                    <fieldset className={TrxSeleccionada ? styles.detalleTrx : styles.detalleVacio}>
                     <legend className={styles.trxTitle}>{TrxSeleccionada?.nombre || ''}</legend>
                     <span className={styles.trxExplanation}>
                       {TrxSeleccionada?.explicacion || ''}

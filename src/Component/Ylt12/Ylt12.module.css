@@ -1,0 +1,43 @@
+.trxImage{
+    width: 50vw;
+    height: 600px;
+    padding: 2.5% 2.5% 0%;  
+    overflow: auto;  
+    aspect-ratio: 4/3;   
+}
+
+  
+.StepContainer{
+    position: relative;
+    margin-top: -40%;
+    left: 50%;
+    height: 400px;
+    width: 35vw;
+    padding: 0.1% 2% 0.1% 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    overflow-y: auto;
+    border: solid 2px rgb(33, 108, 108);  
+    margin-bottom: 2%;
+}
+
+.volverContainer {
+    margin-left: 15%; /* Separar el botón Volver del resto en un 25% */
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .trxImage{        
+        width: 94%;
+        aspect-ratio: 4/3;
+        object-fit: scale-down;
+        padding: 2.5% 2.5% 5%;
+        height: auto;        
+        overflow-x: visible;
+        overflow-y: visible;               
+    }
+ 
+
+}
