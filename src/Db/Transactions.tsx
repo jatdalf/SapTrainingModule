@@ -35,7 +35,11 @@ const Dbtransaction =([
       nombre: 'yupdcontimas',
       uso: 'Modificación de datos web a nivel contingentación',
       explicacion: 'Transacción utilizada para modificar los totales que se encuentran registrados en la tabla de contingentacion, y son visualizados por via web asociados por programas'}
-]);  
+,{        id: '8',
+      nombre: 'Zv11',
+      uso: 'Creación de HU',
+      explicacion: 'Transacción utilizada para crear unidades de manipulación (HU) que son contenedores que agrupan piezas por destinos, estos contenedores pueden ser fisicos o solo lógicos'}
+  ]);  
 
 
 export {Dbtransaction}

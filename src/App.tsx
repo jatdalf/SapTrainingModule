@@ -13,6 +13,7 @@ import Migo from './Component/Migo/Migo';
 import Me21n from './Component/Me21n/Me21n';
 import Ysd_imposicion from './Component/Ysd_imposicion/Ysd_imposicion';
 import Ylt12 from './Component/Ylt12/Ylt12';
+import Zv11 from './Component/Zv11/Zv11';
 
 import ProcesoMe51n from './Component/ProcesoMe51n/ProcesoMe51n';
 import ProcesoMe51nRH from './Component/ProcesoMe51nRH/ProcesoMe51nRH';
@@ -34,7 +35,7 @@ function App() {
         <Route path="/Transacciones/Migo" element={<Migo />}></Route>
         <Route path="/Transacciones/Me21n" element={<Me21n />}></Route>
         <Route path="/Transacciones/Ysd_imposicion" element={<Ysd_imposicion />}></Route>
-
+        <Route path="/Transacciones/Zv11" element={<Zv11 />}></Route>
 
         {/* Sección de Procesos */}
         <Route path="/Procesos" element={<Procesos/>}></Route>        
