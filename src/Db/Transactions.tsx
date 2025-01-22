@@ -39,7 +39,13 @@ const Dbtransaction =([
       nombre: 'Zv11',
       uso: 'Creación de HU',
       explicacion: 'Transacción utilizada para crear unidades de manipulación (HU) que son contenedores que agrupan piezas por destinos, estos contenedores pueden ser fisicos o solo lógicos'}
-  ]);  
+,{        id: '9',
+      nombre: 'Vl74',
+      uso: 'Impresión de HUs',
+      explicacion: 'Transacción utilizada para Imprimir los detalles de las unidades de manipulación'}
+      
+  
+    ]);  
 
 
 export {Dbtransaction}
