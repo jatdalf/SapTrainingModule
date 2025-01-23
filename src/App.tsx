@@ -15,6 +15,8 @@ import Ysd_imposicion from './Component/Ysd_imposicion/Ysd_imposicion';
 import Ylt12 from './Component/Ylt12/Ylt12';
 import Zv11 from './Component/Zv11/Zv11';
 import Vl74 from './Component/Vl74/Vl74';
+import Zrpt0032 from './Component/Zrpt0032/Zrpt0032';
+
 
 import ProcesoMe51n from './Component/ProcesoMe51n/ProcesoMe51n';
 import ProcesoMe51nRH from './Component/ProcesoMe51nRH/ProcesoMe51nRH';
@@ -38,6 +40,8 @@ function App() {
         <Route path="/Transacciones/Ysd_imposicion" element={<Ysd_imposicion />}></Route>
         <Route path="/Transacciones/Zv11" element={<Zv11 />}></Route>
         <Route path="/Transacciones/Vl74" element={<Vl74 />}></Route>
+        <Route path="/Transacciones/Zrpt0032" element={<Zrpt0032 />}></Route>
+
 
 
         {/* Sección de Procesos */}

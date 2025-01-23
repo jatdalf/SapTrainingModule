@@ -43,7 +43,11 @@ const Dbtransaction =([
       nombre: 'Vl74',
       uso: 'Impresión de HUs',
       explicacion: 'Transacción utilizada para Imprimir los detalles de las unidades de manipulación'}
-      
+,{        id: '10',
+  nombre: 'Zrpt0032',
+  uso: 'Consulta de Poblaciones',
+  explicacion: 'Reporte para conocer el Código postal de una localidad y cuál es la sucursal y centro que lo atiende'}
+        
   
     ]);  
 
